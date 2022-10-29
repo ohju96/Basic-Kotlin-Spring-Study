@@ -1,11 +1,11 @@
-package com.example.basickotlinstudy
+package com.test.issueservice
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class BasickotlinstudyApplication
+class IssueServiceApplication
 
 fun main(args: Array<String>) {
-    runApplication<BasickotlinstudyApplication>(*args)
+    runApplication<IssueServiceApplication>(*args)
 }
