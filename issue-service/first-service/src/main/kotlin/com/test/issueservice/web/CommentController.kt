@@ -4,6 +4,7 @@ import com.test.issueservice.config.AuthUser
 import com.test.issueservice.model.CommentRequest
 import com.test.issueservice.model.CommentResponse
 import com.test.issueservice.service.CommentService
+import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 
 @RestController
@@ -27,4 +28,14 @@ class CommentController(
         @PathVariable id: Long,
         @RequestBody request: CommentRequest,
     ) = commentService.edit(id, authUser.userId, request)
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    fun delete(
+        authUser: AuthUser,
+        @PathVariable issueId: Long,
+        @PathVariable id: Long,
+    ) {
+        commentService.delete(issueId, id, authUser.userId)
+    }
 }
