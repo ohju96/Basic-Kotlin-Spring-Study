@@ -3,8 +3,7 @@ package com.example.mvccrud.entity
 import org.apache.catalina.User
 import javax.persistence.*
 
-@Entity
-@Table
+@Entity(name = "user")
 class UserEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
