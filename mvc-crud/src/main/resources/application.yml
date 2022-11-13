@@ -1,0 +1,7 @@
+# Connection - MariaDB
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://127.0.0.1/mvccrud?useUnicode=true&characterEncoding=utf-8
+    username: mvccrud
+    password: 1234
